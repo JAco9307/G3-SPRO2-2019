@@ -36,44 +36,36 @@ int main(void)
 
 	while(1)
 	{
-		
-		switch(direction)
+		switch(state)
 		{
-			case 0:			//Forwards
-			switch(state)
-			{
-				case 0:		//Extending body 1
-				//if no bar found retract body 1 back, direction++
-				
-				
-				break;
-				case 1:		//Moving middle body
-				//If no bar is found go back while checking, if bar is still not found, send error message somehow
-				
-				
-				break;
-				case 2:		//Retracting body 3
-				//If no bar is found go back while checking, if bar is still not found, send error message somehow
-				
-				break;
-			}
+			case 0:		//Extending body ((direction = 0) ? 1 : 3;)
+			//if no bar found retract body ((direction = 0) ? 1 : 3;) back, direction++
+			
+			
 			break;
-			case 1:				//Backwards
-			switch(state)
-			{
-				case 0:			//Extending body 3
-				//if no bar found retract body 3 back, direction++
-				
-				break;
-				case 1: //Moving middle body
-				//If no bar is found go back while checking, if bar is still not found, send error message somehow
-				
-				break;
-				case 2: //Retracting body 1
-				//If no bar is found go back while checking, if bar is still not found, send error message somehow
-				
-				break;
-			}
+			case 1:		//Moving middle body
+			//If no bar is found go back while checking, if bar is still not found, send error message somehow
+			
+			
+			break;
+			case 2:		//Retracting body ((direction = 1) ? 1 : 3;)
+			//If no bar is found go back while checking, if bar is still not found, send error message somehow
+			
+			break;
+		}
+		switch(state)
+		{
+			case 0:			//Extending body ((direction = 1) ? 1 : 3;)
+			//if no bar found retract body ((direction = 1) ? 1 : 3;) back, direction++
+		
+			break;
+			case 1: //Moving middle body
+			//If no bar is found go back while checking, if bar is still not found, send error message somehow
+			
+			break;
+			case 2: //Retracting body ((direction = 0) ? 1 : 3;)
+			//If no bar is found go back while checking, if bar is still not found, send error message somehow
+			
 			break;
 		}
 	}
